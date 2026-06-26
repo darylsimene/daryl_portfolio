@@ -17,11 +17,11 @@ export default function PortfolioCard({ project, onClick }: PortfolioCardProps) 
             <div className="pointer-events-none absolute inset-0 bg-secondary/6 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(1,63,246,0.18),transparent_38%),radial-gradient(circle_at_90%_100%,rgba(1,63,246,0.12),transparent_42%)] opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
 
-            <div className="relative aspect-video overflow-hidden bg-bg">
+            <div className="relative flex aspect-video items-start overflow-hidden bg-bg">
                 <img
                     src={project.coverImage}
                     alt={project.title}
-                    className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+                    className="w-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-[#202020] via-transparent to-transparent opacity-40" />
@@ -35,7 +35,7 @@ export default function PortfolioCard({ project, onClick }: PortfolioCardProps) 
                 </div>
             </div>
 
-            <div className="relative z-10 p-5">
+            <div className="relative z-10 p-5 h-full ">
                 <div className="flex items-start justify-between gap-4">
                     <p title={project.title} className="max-w-xs line-clamp-2 text-left text-base text-lg500! leading-snug text-text">
                         {project.title}
@@ -45,12 +45,10 @@ export default function PortfolioCard({ project, onClick }: PortfolioCardProps) 
                     </span>
                 </div>
 
-                <p className="mt-4 text-left text-sm font-light leading-6 text-text/75 transition-colors duration-500 ease-out group-hover:text-text">
+                <p className="mt-4 line-clamp-5 text-left text-sm font-light leading-6 text-text/75 transition-colors duration-500 ease-out group-hover:text-text">
                     {project.description}
                 </p>
             </div>
-
-            {/* <div className="pointer-events-none absolute left-0 top-0 h-px w-full bg-secondary/70 opacity-0 shadow-[0_0_18px_rgba(1,63,246,0.35)] transition-opacity duration-500 ease-out group-hover:opacity-100" /> */}
         </button>
     );
 }

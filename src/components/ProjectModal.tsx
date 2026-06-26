@@ -95,7 +95,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(1,63,246,0.16),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_42%)]" />
 
                     <div className="relative z-10">
-                        <h3 className="mt-4 text-xl text-accent lg:text-2xl">{project.title}</h3>
+                        <h3 className="mt-4 pr-2 text-xl text-accent lg:text-2xl">{project.title}</h3>
                         <div className="my-4 flex flex-wrap gap-2">
                             {project.tags.map((tag) => (
                                 <span key={tag} className="rounded-full bg-white/10 px-3 py-1 text-xs300 text-text backdrop-blur-sm">
