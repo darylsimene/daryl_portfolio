@@ -5,75 +5,75 @@ import ai_web from "../assets/ai_web_apps.png";
 import szLogo from "../assets/sz_logos.png";
 
 //sz web design
-import szdg01 from "../assets/sz-design-guidelines/szdg-01.png";
-import szdg02 from "../assets/sz-design-guidelines/szdg-02.png";
-import szdg03 from "../assets/sz-design-guidelines/szdg-03.png";
+import szdg01 from "../assets/sz-design-guidelines/szdg-01.webp";
+import szdg02 from "../assets/sz-design-guidelines/szdg-02.webp";
+import szdg03 from "../assets/sz-design-guidelines/szdg-03.webp";
 
 //advocate
-import advocate01 from "../assets/advocate/advocate-01.png";
-import advocate02 from "../assets/advocate/advocate-02.png";
-import advocate03 from "../assets/advocate/advocate-03.png";
-import advocate04 from "../assets/advocate/advocate-04.png";
-import advocate05 from "../assets/advocate/advocate-05.png";
-import advocate06 from "../assets/advocate/advocate-06.png";
+import advocate01 from "../assets/advocate/advocate-01.webp";
+import advocate02 from "../assets/advocate/advocate-02.webp";
+import advocate03 from "../assets/advocate/advocate-03.webp";
+import advocate04 from "../assets/advocate/advocate-04.webp";
+import advocate05 from "../assets/advocate/advocate-05.webp";
+import advocate06 from "../assets/advocate/advocate-06.webp";
 
 //pos
-import pos01 from "../assets/pos/pos-01.png";
-import pos02 from "../assets/pos/pos-02.png";
+import pos01 from "../assets/pos/pos-01.webp";
+import pos02 from "../assets/pos/pos-02.webp";
 
 //ai web apps
-import ai01 from "../assets/ai-web-apps/ai-01.png";
-import ai02 from "../assets/ai-web-apps/ai-02.png";
-import ai03 from "../assets/ai-web-apps/ai-03.png";
+import ai01 from "../assets/ai-web-apps/ai-01.webp";
+import ai02 from "../assets/ai-web-apps/ai-02.webp";
+import ai03 from "../assets/ai-web-apps/ai-03.webp";
 
 //sz logos
-import szLogos from "../assets/sz-logos/sz-logos.png";
-import szLogosAts from "../assets/sz-logos/ats_sc.png";
-import szLogosPMS from "../assets/sz-logos/pms_sc.png";
-import szLogosRSZrc from "../assets/sz-logos/reszource.png";
-import szLogosXpnsz from "../assets/sz-logos/xpensz.png";
+import szLogos from "../assets/sz-logos/sz-logos.webp";
+import szLogosAts from "../assets/sz-logos/ats_sc.webp";
+import szLogosPMS from "../assets/sz-logos/pms_sc.webp";
+import szLogosRSZrc from "../assets/sz-logos/reszource.webp";
+import szLogosXpnsz from "../assets/sz-logos/xpensz.webp";
 
 //ems
-import ems01 from "../assets/ems/ems-01.png";
-import ems02 from "../assets/ems/ems-02.png";
-import ems03 from "../assets/ems/ems-03.png";
+import ems01 from "../assets/ems/ems-01.webp";
+import ems02 from "../assets/ems/ems-02.webp";
+import ems03 from "../assets/ems/ems-03.webp";
 
 //expensz images for carousel
-import xpensz01 from "../assets/xpenSZ/xpensz-01.png";
-import xpensz02 from "../assets/xpenSZ/xpensz-02.png";
-import xpensz03 from "../assets/xpenSZ/xpensz-03.png";
-import xpensz04 from "../assets/xpenSZ/xpensz-04.png";
-import xpensz05 from "../assets/xpenSZ/xpensz-05.png";
+import xpensz01 from "../assets/xpenSZ/xpensz-01.webp";
+import xpensz02 from "../assets/xpenSZ/xpensz-02.webp";
+import xpensz03 from "../assets/xpenSZ/xpensz-03.webp";
+import xpensz04 from "../assets/xpenSZ/xpensz-04.webp";
+import xpensz05 from "../assets/xpenSZ/xpensz-05.webp";
 
 //lockerflow images for carousel
-import lockerflow01 from "../assets/LockerFlow/lf-01.png";
-import lockerflow02 from "../assets/LockerFlow/lf-02.png";
-import lockerflow03 from "../assets/LockerFlow/lf-03.png";
-import lockerflow04 from "../assets/LockerFlow/lf-04.png";
-import lockerflow05 from "../assets/LockerFlow/lf-05.png";
+import lockerflow01 from "../assets/LockerFlow/lf-01.webp";
+import lockerflow02 from "../assets/LockerFlow/lf-02.webp";
+import lockerflow03 from "../assets/LockerFlow/lf-03.webp";
+import lockerflow04 from "../assets/LockerFlow/lf-04.webp";
+import lockerflow05 from "../assets/LockerFlow/lf-05.webp";
 
 //performance management system images for carouse
-import spm01 from "../assets/spm/spm-01.png";
-import spm02 from "../assets/spm/spm-02.png";
-import spm03 from "../assets/spm/spm-03.png";
+import spm01 from "../assets/spm/spm-01.webp";
+import spm02 from "../assets/spm/spm-02.webp";
+import spm03 from "../assets/spm/spm-03.webp";
 
 // nopa
-import nopa01 from "../assets/nopa/nopa-01.png";
-import nopa02 from "../assets/nopa/nopa-02.png";
-import nopa03 from "../assets/nopa/nopa-03.png";
+import nopa01 from "../assets/nopa/nopa-01.webp";
+import nopa02 from "../assets/nopa/nopa-02.webp";
+import nopa03 from "../assets/nopa/nopa-03.webp";
 
 //journey tracker
-import jt01 from "../assets/journey-tracker/jt-01.png";
-import jt02 from "../assets/journey-tracker/jt-02.png";
-import jt03 from "../assets/journey-tracker/jt-03.png";
-import jt04 from "../assets/journey-tracker/jt-04.png";
+import jt01 from "../assets/journey-tracker/jt-01.webp";
+import jt02 from "../assets/journey-tracker/jt-02.webp";
+import jt03 from "../assets/journey-tracker/jt-03.webp";
+import jt04 from "../assets/journey-tracker/jt-04.webp";
 
 //reszource
-import rszrc01 from "../assets/reSZource/rszrc-01.png";
-import rszrc02 from "../assets/reSZource/rszrc-02.png";
-import rszrc03 from "../assets/reSZource/rszrc-03.png";
-import rszrc04 from "../assets/reSZource/rszrc-04.png";
-import rszrc05 from "../assets/reSZource/rszrc-05.png";
+import rszrc01 from "../assets/reSZource/rszrc-01.webp";
+import rszrc02 from "../assets/reSZource/rszrc-02.webp";
+import rszrc03 from "../assets/reSZource/rszrc-03.webp";
+import rszrc04 from "../assets/reSZource/rszrc-04.webp";
+import rszrc05 from "../assets/reSZource/rszrc-05.webp";
 
 export type Project = {
     id: number;

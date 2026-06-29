@@ -1,4 +1,4 @@
-import profileImg from "../assets/heroPhoto.jpeg";
+import profileImg from "../assets/heroPhoto.webp";
 
 import { Phone, ArrowUpRight } from "lucide-react";
 import PrimaryButton from "../components/PrimaryButton";
