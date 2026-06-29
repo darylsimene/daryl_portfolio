@@ -50,7 +50,7 @@ export default function Hero() {
                             Reach Me
                         </SecondaryButton>
 
-                        <PrimaryButton href="/portfolio" icon={<ArrowUpRight className="h-5 w-5" strokeWidth={1.5} />}>
+                        <PrimaryButton to="/portfolio" icon={<ArrowUpRight className="h-5 w-5" strokeWidth={1.5} />}>
                             View my work
                         </PrimaryButton>
                     </div>

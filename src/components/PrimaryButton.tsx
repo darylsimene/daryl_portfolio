@@ -1,16 +1,18 @@
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type PrimaryButtonProps = {
     href?: string;
+    to?: string;
+    onClick?: () => void;
     children: ReactNode;
     icon?: ReactNode;
     className?: string;
     target?: "_blank" | "_self";
-    onClick?: () => void;
 };
 
-export default function PrimaryButton({ href, onClick, children, icon, className = "", target = "_self" }: PrimaryButtonProps) {
-    const buttonClass = `cursor-pointer group relative inline-flex h-12 items-center justify-center gap-3 overflow-hidden rounded-full border border-accent bg-accent px-6 text-base font-light text-bg shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/70 hover:bg-accent hover:text-bg hover:shadow-[0_0_28px_rgba(172,236,0,0.32),inset_0_1px_14px_rgba(250,255,211,0.28),inset_0_-8px_18px_rgba(0,24,46,0.18)] ${className}`;
+export default function PrimaryButton({ href, to, onClick, children, icon, className = "", target = "_self" }: PrimaryButtonProps) {
+    const buttonClass = `group relative inline-flex h-12 items-center justify-center gap-3 overflow-hidden rounded-full border border-accent bg-accent px-6 text-base font-light text-bg shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/70 hover:bg-accent hover:text-bg hover:shadow-[0_0_28px_rgba(172,236,0,0.32),inset_0_1px_14px_rgba(250,255,211,0.28),inset_0_-8px_18px_rgba(0,24,46,0.18)] ${className}`;
 
     const content = (
         <>
@@ -27,6 +29,14 @@ export default function PrimaryButton({ href, onClick, children, icon, className
             <span className="relative z-10 text-bg">{children}</span>
         </>
     );
+
+    if (to) {
+        return (
+            <Link to={to} className={buttonClass}>
+                {content}
+            </Link>
+        );
+    }
 
     if (!href) {
         return (
