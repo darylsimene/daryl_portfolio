@@ -257,6 +257,19 @@
     }
 }
 
+.modal-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(172, 236, 0, 0.45);
+    border-radius: 999px;
+}
+
 /* --- TAILWIND V4 SAFELIST --- */
 @source inline("{bg,text,border,outline}-{bg,surface,surface-alt,text,text-muted,text-h,border,accent,accent-bg,accent-border,secondary,secondary-bg,secondary-border,code-bg,social-bg}");
 @source inline("text-{h1,h2,h3,xl300,xl500,lg300,lg500,md300,md500,sm300,sm500,xs300,xs500}");

@@ -13,6 +13,22 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isClosing, setIsClosing] = useState(false);
 
+    useEffect(() => {
+        if (!project) return;
+
+        setActiveIndex(0);
+    }, [project]);
+
+    useEffect(() => {
+        if (!project) return;
+
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [project]);
+
     if (!project) return null;
 
     const images = project.carouselImages.length > 0 ? project.carouselImages : [project.coverImage];
@@ -35,7 +51,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-bg/80 px-4 py-6 backdrop-blur-md">
+        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-bg/80 px-4 py-6 backdrop-blur-md">
             <button type="button" onClick={handleClose} className="cursor-pointer absolute inset-0 " aria-label="Close modal" />
             <div
                 className={`relative z-10 grid max-h-[85vh] w-full max-w-7xl origin-center overflow-hidden border border-white/10 bg-surface shadow-[0_0_60px_rgba(1,63,246,0.24)] lg:grid-cols-[2.2fr_1fr] ${
@@ -91,7 +107,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     )}
                 </div>
                 {/* Right: content */}
-                <aside className="relative overflow-y-auto border-t border-white/10 bg-white/5 p-6 backdrop-blur-md lg:col-span-1 lg:border-l lg:border-t-0">
+                <aside className="relative max-h-[85vh] overflow-y-auto overscroll-contain border-t border-white/10 bg-white/5 p-6 backdrop-blur-md lg:col-span-1 lg:border-l lg:border-t-0">
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(1,63,246,0.16),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_42%)]" />
 
                     <div className="relative z-10">

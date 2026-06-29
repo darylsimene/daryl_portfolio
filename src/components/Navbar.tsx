@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import ContactModal from "./ContactModal";
 
 export default function Navbar() {
     const location = useLocation();
     const navigate = useNavigate();
+    const [isContactOpen, setIsContactOpen] = useState(false);
 
     const isHome = location.pathname === "/";
     const isPortfolio = location.pathname === "/portfolio";
@@ -66,12 +69,13 @@ export default function Navbar() {
 
                 <button
                     type="button"
-                    onClick={() => scrollToSection("contact")}
+                    onClick={() => setIsContactOpen(true)}
                     className="cursor-pointer bg-transparent text-text transition duration-300 hover:text-accent"
                 >
                     Contact
                 </button>
             </div>
+            <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
         </nav>
     );
 }

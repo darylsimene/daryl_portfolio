@@ -153,7 +153,7 @@ export const projects: Project[] = [
         coverImage: xpensz01,
         carouselImages: [xpensz01, xpensz02, xpensz03, xpensz04, xpensz05],
         figmaUrl: undefined,
-        tags: ["Replit", "AI", "Web App"],
+        tags: ["Frontend", "Replit", "AI", "Web App"],
         description:
             "Expensz is for handling reimbursements, cash advances, and purchase orders. Employees submit requests that automatically route through the right chain of approvers — their supervisor(s), any additional reviewers, the comptroller, and the President/COO when needed — with role-based permissions, email notifications, file attachments, and a clear visual workflow that shows where each request is in the approval process and when each step happened.",
     },
@@ -163,7 +163,7 @@ export const projects: Project[] = [
         coverImage: lockerflow01,
         carouselImages: [lockerflow01, lockerflow02, lockerflow03, lockerflow04, lockerflow05],
         figmaUrl: undefined,
-        tags: ["Replit", "AI", "Web App"],
+        tags: ["Frontend", "Replit", "AI", "Web App"],
         description:
             "Lockerflow is a workplace storage management system where employees scan QR codes to check in and check out storage units — lockers, phone holders, umbrella racks, helmets, and headsets — while an admin dashboard gives managers a real-time view of usage, transaction history, and inventory across multiple buildings and floors.",
     },
@@ -173,7 +173,7 @@ export const projects: Project[] = [
         coverImage: spm01,
         carouselImages: [spm01, spm02, spm03],
         figmaUrl: "https://www.figma.com/design/eJcprZ09CzFpZxpdezcBDJ/Performance-Management-System?node-id=1-7194&t=3xxCH28Z0T185COr-1",
-        tags: ["Replit", "AI", "Web App", "Figma"],
+        tags: ["Frontend", "Replit", "AI", "Web App", "Figma"],
         description:
             "A web app that helps manage the full employee performance lifecycle — from setting goals and tracking progress through check-ins, to running structured evaluation workflows with a 3-signature approval process. Managers and admins get reporting dashboards, completion rate tracking, and automated email reminders, while employees can view their own goals and evaluations. The system also handles more advanced scenarios like Corrective Action Plans (CAPs) for performance issues, configurable deadlines per department, and role-based access so that admins, managers, and employees each see only what's relevant to them",
     },
@@ -182,7 +182,7 @@ export const projects: Project[] = [
         title: "Notice of Performance Action (NOPA) Generator",
         coverImage: nopa02,
         carouselImages: [nopa01, nopa02, nopa03],
-        tags: ["Replit", "AI", "Web App"],
+        tags: ["Frontend", "Replit", "AI", "Web App"],
         description:
             "A web app for HR teams to create and manage Notice of Personnel Action forms. It covers regularizations, promotions, salary adjustments, and transfers through guided multi-step forms, digital signature approvals, and a reports dashboard with full role-based access control.",
     },
@@ -192,7 +192,7 @@ export const projects: Project[] = [
         title: "Reservation and Boooking System",
         coverImage: rszrc02,
         carouselImages: [rszrc01, rszrc02, rszrc03, rszrc04, rszrc05],
-        tags: ["Replit", "AI", "Web App"],
+        tags: ["Frontend", "Replit", "AI", "Web App"],
         description:
             "Reszource Management is a smart workspace reservation system built for SupportZebra that need to manage shared physical spaces efficiently. It lets employees browse and book meeting rooms or workstations, while giving administrators full control over floor plans, seat assignments, and asset tracking. The system keeps everyone in sync in real time, so availability is always accurate across the entire organization.",
     },
@@ -201,7 +201,7 @@ export const projects: Project[] = [
         title: "Journey Tracker",
         coverImage: jt04,
         carouselImages: [jt01, jt02, jt03, jt04],
-        tags: ["Replit", "AI", "Web App"],
+        tags: ["Frontend", "Replit", "AI", "Web App"],
         description:
             "JourneyTracker is an internal HR tool that helps a company track employees through every stage of their work lifecycle — from the moment they apply, through onboarding, and into active employment.",
     },
