@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import type { Project } from "../data/projects";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
+import LoadingRing from "./LoadingRing";
 
 type ProjectModalProps = {
     project: Project | null;
@@ -12,6 +13,7 @@ type ProjectModalProps = {
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isClosing, setIsClosing] = useState(false);
+    const [isImageLoading, setIsImageLoading] = useState(true);
 
     useEffect(() => {
         if (!project) return;
@@ -28,6 +30,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             document.body.style.overflow = "";
         };
     }, [project]);
+
+    useEffect(() => {
+        setIsImageLoading(true);
+    }, [activeIndex, project]);
 
     if (!project) return null;
 
@@ -68,14 +74,29 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </button>
                 {/* Left: carousel */}
                 <div className="relative flex min-h-105 items-center justify-center bg-bg lg:h-[85vh] lg:min-h-0">
-                    <img src={images[activeIndex]} alt={project.title} className="h-full w-full object-contain" />
+                    {isImageLoading && (
+                        <div className="absolute inset-0 z-10 grid place-items-center bg-bg/40 backdrop-blur-sm">
+                            <LoadingRing size="lg" />
+                        </div>
+                    )}
+
+                    <img
+                        key={images[activeIndex]}
+                        src={images[activeIndex]}
+                        alt={project.title}
+                        onLoad={() => setIsImageLoading(false)}
+                        onError={() => setIsImageLoading(false)}
+                        className={`h-full w-full object-contain transition-opacity duration-300 ${
+                            isImageLoading ? "opacity-0" : "opacity-100"
+                        }`}
+                    />
 
                     {images.length > 1 && (
                         <>
                             <button
                                 type="button"
                                 onClick={handlePrevious}
-                                className="absolute left-4 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/10 bg-bg/70 text-text backdrop-blur-md transition duration-300 hover:border-accent/50 hover:text-accent"
+                                className="absolute left-4 top-1/2 z-20 grid size-11 -translate-y-1/2 cursor-pointer place-items-center rounded-full border border-white/10 bg-bg/70 text-text backdrop-blur-md transition duration-300 hover:border-accent/50 hover:text-accent"
                                 aria-label="Previous image"
                             >
                                 <ChevronLeft className="h-6 w-6" strokeWidth={1.5} />
@@ -84,19 +105,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             <button
                                 type="button"
                                 onClick={handleNext}
-                                className="absolute right-4 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/10 bg-bg/70 text-text backdrop-blur-md transition duration-300 hover:border-accent/50 hover:text-accent"
+                                className="absolute right-4 top-1/2 z-20 grid size-11 -translate-y-1/2 cursor-pointer place-items-center rounded-full border border-white/10 bg-bg/70 text-text backdrop-blur-md transition duration-300 hover:border-accent/50 hover:text-accent"
                                 aria-label="Next image"
                             >
                                 <ChevronRight className="h-6 w-6" strokeWidth={1.5} />
                             </button>
 
-                            <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2">
+                            <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
                                 {images.map((image, index) => (
                                     <button
                                         key={image}
                                         type="button"
                                         onClick={() => setActiveIndex(index)}
-                                        className={`h-2 rounded-full transition-all duration-300 ${
+                                        className={`h-2 cursor-pointer rounded-full transition-all duration-300 ${
                                             activeIndex === index ? "w-8 bg-accent" : "w-2 bg-white/40"
                                         }`}
                                         aria-label={`Go to image ${index + 1}`}
